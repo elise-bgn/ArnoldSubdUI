@@ -1,16 +1,11 @@
-# This is a sample Python script.
+from maya import cmds
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+selection = cmds.ls(sl=1)
 
+# create a loop over each object in selection
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+for geo in selection:
+    if cmds.listRelatives(geo)[0] in cmds.ls(et='mesh'):
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+        cmds.setAttr(geo + ".aiSubdivType", 1);
+        cmds.setAttr(geo + ".aiSubdivIterations", 2);
