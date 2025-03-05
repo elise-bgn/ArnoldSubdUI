@@ -24,7 +24,7 @@ class ArnoldSubdUI:
                                        widthHeight=(400, 300))
         cmds.columnLayout(adjustableColumn=True, rowSpacing=10)
 
-        self.mainLayout = cmds.columnLayout(w=250, h=120)
+        self.mainLayout = cmds.columnLayout(w=250, h=150)
 
         #Title text
         cmds.text(label="Arnold Subdivisions",
@@ -32,12 +32,27 @@ class ArnoldSubdUI:
                   bgc=(0.15,0.15,0.15))
         cmds.separator(h=10, style="none")
 
-        self.rowLayout = cmds.rowColumnLayout( nc=3, cw= [(1,150),(2,50),(3,50)])
+        self.rowLayout = cmds.rowColumnLayout( nc=3, cw= [(1,150),(2,50),(3,50)],
+                                               columnOffset=[(1, "both", 5),
+                                               (2, "both", 5), (3, "both", 5)])
 
         #Dropdown layout
         self.subOptionMenu = cmds.optionMenuGrp("subOptionMenu", label="Sub Type", cal=[1, "left"], cw=(1, 47))
         cmds.menuItem(label="none")
+        cmds.menuItem(label="catclark")
+        cmds.menuItem(label="linear")
 
+        #Set catclark as default
+        cmds.optionMenuGrp(self.subOptionMenu, e=1, sl=2)
+
+        self.iterationNumbtext = cmds.text(label="Iterations", fn="plainLabelFont", align="left")
+        self.iterationNumb     = cmds.intField("subNumb", minValue=0, maxValue=100, value=2, w=10)
+
+        cmds.separator(h=10, style="none")
+
+        self.subBtn = cmds.button(label = "Set Subdivisions",w=250, h=50, parent=self.mainLayout) #command=aiSubdivs
+
+        #Display UI
         cmds.showWindow(self.tool_window)
 
     def window_cleaner(self):

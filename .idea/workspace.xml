@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82a4994f-0f21-4d1b-b246-0ac62cbb9e90" name="Changes" comment="main code to adjust subdiv to selected objects (hardcoded)">
+    <list default="true" id="82a4994f-0f21-4d1b-b246-0ac62cbb9e90" name="Changes" comment="Made one class for the code to run. Made the first half of the UI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -100,7 +100,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741161121492</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Made one class for the code to run. Made the first half of the UI">
+      <option name="closed" value="true" />
+      <created>1741164162302</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1741164162303</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -117,6 +125,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="main code to adjust subdiv to selected objects (hardcoded)" />
-    <option name="LAST_COMMIT_MESSAGE" value="main code to adjust subdiv to selected objects (hardcoded)" />
+    <MESSAGE value="Made one class for the code to run. Made the first half of the UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made one class for the code to run. Made the first half of the UI" />
   </component>
 </project>
