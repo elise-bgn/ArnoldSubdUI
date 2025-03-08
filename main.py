@@ -17,7 +17,7 @@ class ArnoldSubdUI:
 
     def build_ui(self):
         """
-        Constructs the user interface for the Batch Renderer tool.
+        Constructs the user interface for the tool.
         """
         self.tool_window = cmds.window(self.tool_window,
                                        title=self.window_title,
